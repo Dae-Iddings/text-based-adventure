@@ -52,7 +52,7 @@ function getInputs() {
     for (let i = 0; i < story[story.currentScene].choices.length; i++) {
         input += `
         <div>
-        <input id='radio${i}' type='radio' name='choices'/>  
+        <input data-destinations=${story[story.currentScene].choices[i].destination} id='radio${i}' type='radio' name='choices'/>  
         <label for='radio${i}'>${story[story.currentScene].choices[i].choice}</label>
         </div>
         `
