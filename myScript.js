@@ -18,25 +18,32 @@ let story = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let button = document.querySelector('#start-button');
     let input = document.querySelector('#name-input');
     let content = document.querySelector('#content');
-    button.addEventListener('click', function() {
-     content.innerHTML = `
+    button.addEventListener('click', renderScene)
+})
+function renderScene() {
+    content.innerHTML = `
      <h1>${story[story.currentScene].title}</h1>
      <p>${story[story.currentScene].story}</p>
      <p><i>${story[story.currentScene].dialogue}</i></p>
      ${getInputs()}
-     <button>Continue</button>
-      `
+     <button id="submit-button">Continue</button>
+     `
+    let button = document.querySelector('#submit-button')
+    button.addEventListener('click', function () {
+        getInputValues()
     })
-})
-
-  function getInputs() {
+}
+function getInputValues() {
+document.querySelectorAll
+}
+function getInputs() {
     let input = '';
     for (let i = 0; i < story[story.currentScene].choices.length; i++) {
-        input+=`
+        input += `
         <div>
         <input id='radio${i}' type='radio' name='choices'/>  
         <label for='radio${i}'>${story[story.currentScene].choices[i].choice}</label>
@@ -44,4 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
         `
     }
     return input;
-  } 
+} 
