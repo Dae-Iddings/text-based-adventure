@@ -8,9 +8,11 @@ let story = {
         choices: [
             {
                 choice: 'Of course I\'ll help you',
+                destination: 'ofCourse'
             },
             {
-                choice: 'No theres a story of a cat stuck in a tree I have to cover'
+                choice: 'No theres a story of a cat stuck in a tree I have to cover',
+                destination: 'sadCat'
             }
         ]
 
