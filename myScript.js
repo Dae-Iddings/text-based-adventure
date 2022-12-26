@@ -38,7 +38,12 @@ function renderScene() {
     })
 }
 function getInputValues() {
-document.querySelectorAll
+let inputs = document.querySelectorAll('input[type="radio"]');
+for (let i = 0; i < inputs.length; i++) {
+if (inputs[i].checked) {
+    console.log(inputs[i]);
+}
+}
 }
 function getInputs() {
     let input = '';
