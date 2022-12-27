@@ -3,21 +3,22 @@ let story = {
     currentScene: "attack",
     attack: {
         title: 'Chapter One',
-        story: 'You are a journalist sitting at your desk coved notes, thinking abut how it has been three months since your last big scoop, the interview of Instagram scammer Loretta Lasher. Your thoughts are interrupted the sound of your phone ringing. It\'s your cousin Julie.',
-        dialogue: '"Hello y/n. I need your help a witch visited me last night and told me I had five days to find her beloved or else. Can you please come help me investigate?"',
+        story: 'Y/N, you awake in the middle of the night to a low rumbling. It increases as a women dressed in a white 19th century nightgown rises from your floor. You immediately recognize her as the Bell Witch a witch said to haunt your town as far back as 1817. The rumbling stops as she begins to cry out. Her voice surrounds you.',
+        dialogue: '"Betty? Oh where if my Betty? Please help me find my Betty."',
         choices: [
             {
-                choice: 'Of course I\'ll help you',
-                destination: 'ofCourse'
+                choice: 'Offer to help',
+                destination: 'help'
             },
             {
-                choice: 'No theres a story of a cat stuck in a tree I have to cover',
-                destination: 'sadCat'
+                choice: 'Scream',
+                destination: 'scream'
             }
         ]
 
 
-    }
+    },
+
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -43,7 +44,7 @@ function getInputValues() {
 let inputs = document.querySelectorAll('input[type="radio"]');
 for (let i = 0; i < inputs.length; i++) {
 if (inputs[i].checked) {
-    console.log(inputs[i]);
+    console.log(inputs[i].getAttribute('data-destinations'));
 }
 }
 }
