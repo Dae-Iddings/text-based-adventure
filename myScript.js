@@ -65,7 +65,8 @@ function getInputValues() {
 let inputs = document.querySelectorAll('input[type="radio"]');
 for (let i = 0; i < inputs.length; i++) {
 if (inputs[i].checked) {
-    console.log(inputs[i].getAttribute('data-destinations'));
+    story.currentScene = inputs[i].getAttribute('data-destinations');
+    renderScene();
 }
 }
 }
