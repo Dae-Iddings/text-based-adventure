@@ -44,7 +44,7 @@ scream: {
 },
 museum: {
     title: 'Museum',
-    story: 'The next morning you head to the town museum to find out more about the Bell witch. The museum is a small single room. On the left if a large quilt. In front of you is a glass case filled with pictures of the Bell family. On the right is a bookshelf. Where would you like to look?',
+    story: 'The next morning you head to the town museum to find out more about the Bell witch. The museum is a small single room. On the left is a large quilt. In front of you is a glass case filled with pictures of the Bell family. On the right is a bookshelf. Where would you like to look?',
     //dialogue: 'test',
     choices: [
         {
@@ -67,11 +67,37 @@ quilt: {
     dialogue: 'Betsy Bell was an avid quilter. It is believed she created this quilt after being haunted with visions of the Bell Witch',
     choices: [
         {
-            choice: 'Look at something else',
+            choice: 'Finish checking the museum',
             destination: 'museum'
         }
     ]
-}
+},
+glassCase: {
+    title: 'Family Photos',
+    story: 'The glass case contains a handful of illustrated images of a family dressed in early 19th century farm wear. Descriptions next to the images read',
+    dialogue: 'These are the few existing images of the Bell family who were widely believed to be haunted by the spirit of Kate Batts otherwise known as the Bell Witch. Farmer John Bell and his daughter Betsy Bell were said to be the worst afflicted by the witch\'s haunting',
+    choices: [
+        {
+            choice: 'Finish checking the museum',
+            destination: 'museum'
+        }
+    ]
+},
+bookshelf: {
+    title: 'John Journal',
+    story: 'The bookshelf is mostly full of old town yearbooks and copies of fictional accounts of the witch. One book catches your eye an old, red book titled An Authenticated History of the Bell Witch featuring excerpts of John Bell\'s journal. You begin to leaf through the pages till you see one titled <i>Who Was Betty</i>',
+    dialogue: 'I\'ve done it. I caught that insipid Betty the witch loves so much. I am going to use it to curse that creature and keep her far from my family. I just need to get to the cave to collect the artifacts.',
+    choices: [
+        {
+            choice: 'Finish checking the museum',
+            destination: 'museum'
+        },
+        {
+            choice: 'Check out the Cave',
+            destination: 'cave'
+        }
+    ]
+},
 }
 }
 
