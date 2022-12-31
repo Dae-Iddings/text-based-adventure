@@ -122,6 +122,17 @@ choices: [
     },
 ]
 },
+historicMarker: {
+title: 'The Bell Witch Cave',
+story: 'The aging history marker reads:',
+dialogue: 'It is believed that when the witch would leave the Bell family she would find refuge in the cave. Betsy Bell and her friends one encountered the witch while exploring the cave, a young boy got stuck in a hole. He heard a voice cry "I\'ll get him out" and the sound of crows before he felt hands pulling him out of the hole.',
+choices: [
+    {
+        choice: 'Continue exploring the cave',
+        destination: 'cave'
+    }
+]
+},
 }
 }
 
