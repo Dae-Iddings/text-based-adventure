@@ -100,7 +100,8 @@ bookshelf: {
     ]
 },
 cave: {
-
+title: 'Cave',
+story: 'The cave is relatively small only about 500ft long. The cave is mostly limestone will jagged rocks sticking menacingly in all directions. In front of you sits a large metal grate with a gap just big enough for a person. Next to it sits a historic marker titled "The Bell Witch Cave". Further back in the cave you see an empty grave and a large geode.'
 },
 }
 }
