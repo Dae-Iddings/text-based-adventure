@@ -1,4 +1,4 @@
-
+let inventory = [];
 let story;
 function getStory(name) {
   return {
@@ -10,7 +10,7 @@ function getStory(name) {
         choices: [
             {
                 choice: 'Offer to help',
-                destination: 'help'
+                destination: 'help',
             },
             {
                 choice: 'Scream',
@@ -24,6 +24,7 @@ help: {
     title: 'Choose Kindness',
     story: 'She stops in her tracks and turns to you. Before disappearing and says',
     dialogue: '"The secrets to where my Betty is lie in John Bell\'s journal find it before its too late."',
+    //inventoryItem: 'test',
     choices: [
         {
         choice: 'Continue to the next morning',
@@ -86,7 +87,7 @@ glassCase: {
 bookshelf: {
     title: 'John Journal',
     story: 'The bookshelf is mostly full of old town yearbooks and copies of fictional accounts of the witch. One book catches your eye an old, red book titled An Authenticated History of the Bell Witch featuring excerpts of John Bell\'s journal. You begin to leaf through the pages till you see one titled <i>Who Was Betty</i>',
-    dialogue: 'I\'ve done it. I caught that insipid Betty the witch loves so much. I am going to use it to curse that creature and keep her far from my family. I just need to get to the cave to collect the artifacts.',
+    dialogue: 'I\'ve done it. I caught that insipid Betty the witch loves so much. I am going to use it to curse that creature  to hell for the next 200 years. I just need to get to the cave to collect the three ingredients.',
     choices: [
         {
             choice: 'Finish checking the museum',
@@ -97,6 +98,9 @@ bookshelf: {
             destination: 'cave'
         }
     ]
+},
+cave: {
+
 },
 }
 }
@@ -111,6 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
 function renderScene() {
+    if (story[story.currentScene].inventoryItem) {
+        addToInventory();
+    }
     let dialogue =''; 
     if (story[story.currentScene].dialogue) {
         dialogue = story[story.currentScene].dialogue;
@@ -134,7 +141,8 @@ if (inputs[i].checked) {
     story.currentScene = inputs[i].getAttribute('data-destinations');
     renderScene();
     return;
-}
+} 
+
 }
 story.currentScene = story[story.currentScene].defaultDestination
 renderScene();
@@ -154,3 +162,9 @@ function getInputs() {
     }
     return input;
 } 
+function addToInventory() {
+        let inventoryItem = story[story.currentScene].inventoryItem
+        console.log(inventoryItem)
+        inventory.push(inventoryItem);
+        console.log(inventory)
+}
