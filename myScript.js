@@ -5,7 +5,11 @@ function getStory(name) {
     currentScene: "attack",
     attack: {
         title: 'The Bell Witch',
-        story: `${name}, you awake in the middle of the night to a low rumbling. It increases as a women dressed in a white 19th century nightgown rises from your floor. You immediately recognize her as the Bell Witch a witch said to haunt your town as far back as 1817. The rumbling stops as she begins pacing unaware of your presents and crys out. Her voice surrounds you.`,
+        story: `${name}, you awake in the middle of the night to a low rumbling. 
+        It increases as a women dressed in a white 19th century nightgown rises from your floor. 
+        You immediately recognize her as the Bell Witch a witch said to haunt your town as far back as 1817. 
+        The rumbling stops as she begins pacing unaware of your presents and crys out. 
+        Her voice surrounds you.`,
         dialogue: '"Betty? Oh where is my Betty? Please help me find my Betty. I know John Bell stole my betty"',
         choices: [
             {
@@ -101,7 +105,22 @@ bookshelf: {
 },
 cave: {
 title: 'Cave',
-story: 'The cave is relatively small only about 500ft long. The cave is mostly limestone will jagged rocks sticking menacingly in all directions. In front of you sits a large metal grate with a gap just big enough for a person. Next to it sits a historic marker titled "The Bell Witch Cave". Further back in the cave you see an empty grave and a large geode.'
+story: 'The cave is relatively small only about 500ft long. It is mostly limestone with jagged rocks sticking menacingly in all directions. In front of you sits a large metal grate with a gap just big enough for a person. Next to it sits a historic marker titled "The Bell Witch Cave". Further back in the cave you see an empty grave and a large geode.',
+choices: [
+    {
+        choice: 'Read the historic marker',
+        destination: 'historicMarker'
+    },
+    
+    {
+        choice: 'Investigate Grave',
+        destination: 'emptyGrave'
+    },  
+    {
+        choice: 'Investigate Geode',
+        destination: 'geode'
+    },
+]
 },
 }
 }
