@@ -91,7 +91,7 @@ glassCase: {
 bookshelf: {
     title: 'John Journal',
     story: 'The bookshelf is mostly full of old town yearbooks and copies of fictional accounts of the witch. One book catches your eye an old, red book titled An Authenticated History of the Bell Witch featuring excerpts of John Bell\'s journal. You begin to leaf through the pages till you see one titled <i>Who Was Betty</i>',
-    dialogue: 'I\'ve done it. I caught that insipid Betty the witch loves so much. I am going to use it to curse that creature  to hell for the next 200 years. I just need to get to the cave to collect the three ingredients.',
+    dialogue: 'I\'ve done it. I caught that insipid Betty the witch loves so much. I am going to use it to curse that creature  to hell for the next 200 years. I just need to get to the cave to solve the three riddles.',
     choices: [
         {
             choice: 'Finish checking the museum',
@@ -133,6 +133,10 @@ choices: [
     }
 ]
 },
+emptyGrave: {
+    title: 'Empty Grave',
+    story: 'There is a 2.5ft by 8ft grave marked only by a small head stone with the image of a bird.'
+}
 }
 }
 
